@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Local Community Event Portal</title>
+
+  <!-- Internal style for background -->
+  <style>
+    body {
+      background-color: #f4f4f4;
+    }
+    #welcomeBanner {
+      background-color: lightblue;
+      padding: 10px;
+      text-align: center;
+    }
+    .highlight {
+      background-color: yellow;
+    }
+  </style>
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+  <!-- External JavaScript -->
+  <script defer src="main.js"></script>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <ul class="nav-menu">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#events">Events</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="help.html" target="_blank">Help</a></li>
+    </ul>
+  </nav>
+
+  <!-- Welcome Banner -->
+  <header id="mainHeader">
+    <div id="welcomeBanner">
+      <h1 style="color: red;">Welcome to the Community Portal</h1>
+      <p class="highlight">Don't miss our <span style="color: red; font-weight: bold;">Special Offers!</span></p>
+    </div>
+  </header>
+
+  <!-- Image Gallery -->
+  <section id="gallery">
+    <table>
+      <caption>Past Event Highlights</caption>
+      <tr>
+        <td><img src="events.jpg" alt="Event 1" title="Music Fest" class="event-img"></td>
+        <td><img src="events.jpg" alt="Event 2" title="Food Carnival" class="event-img"></td>
+        <td><img src="events.jpg" alt="Event 3" title="Art Show" class="event-img"></td>
+      </tr>
+      <tr>
+        <td><img src="events.jpg" alt="Event 4" title="Workshop" class="event-img"></td>
+        <td><img src="events.jpg" alt="Event 5" title="Yoga Camp" class="event-img"></td>
+        <td><img src="events.jpg" alt="Event 6" title="Technology Fair" class="event-img"></td>
+      </tr>
+    </table>
+  </section>
+
+  <!-- Registration Form -->
+  <section id="register">
+    <form id="registrationForm">
+      <h2>Event Registration</h2>
+      <input type="text" name="name" placeholder="Your Name" required autofocus>
+      <input type="email" name="email" placeholder="Email" required>
+      <input type="date" name="date" required>
+      <select name="eventType" onchange="showFee(this)" required>
+        <option value="">Select Event Type</option>
+        <option value="music">Music</option>
+        <option value="tech">Technology</option>
+      </select>
+      <input type="tel" id="phone" placeholder="Phone" onblur="validatePhone(this)">
+      <textarea name="message" placeholder="Message" onkeydown="countChars(event)"></textarea>
+      <output id="confirmation"></output>
+      <button type="submit" onclick="submitForm(event)">Register</button>
+    </form>
+    <button onclick="clearPreferences()">Clear Preferences</button>
+  </section>
+
+  <!-- Video Promo -->
+  <section>
+    <video controls oncanplay="videoReady()" width="400">
+      <source src="promo.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <p id="videoMsg"></p>
+  </section>
+
+  <!-- Geolocation -->
+  <section>
+    <button onclick="findLocation()">Find Nearby Events</button>
+    <p id="locationOutput"></p>
+  </section>
+
+</body>
+</html>

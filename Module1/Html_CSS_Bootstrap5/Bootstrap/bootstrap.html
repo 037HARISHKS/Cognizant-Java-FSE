@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bootstrap 5 Exercises 1.1 to 19.2</title>
+  <!-- Bootstrap 5 CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Bootstrap Icons CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+</head>
+<body class="p-3">
+
+  <h1 class="mb-4">Bootstrap 5 Exercises (1.1 to 19.2)</h1>
+
+  <!-- 1. Setting Up Bootstrap 5 -->
+  <!-- 1.1 Basic HTML with Bootstrap CDN -->
+  <section id="exercise-1-1" class="mb-5">
+    <h2>1.1: Basic HTML Page with Bootstrap CDN</h2>
+    <p>This file itself demonstrates linking Bootstrap via CDN in the <code>&lt;head&gt;</code>.</p>
+  </section>
+
+  <!-- 1.2 Setup with downloaded files (description) -->
+  <section id="exercise-1-2" class="mb-5">
+    <h2>1.2: Setup with Downloaded Bootstrap Files</h2>
+    <p>Download Bootstrap files from <a href="https://getbootstrap.com/docs/5.3/getting-started/download/" target="_blank">official site</a> and link <code>bootstrap.min.css</code> and <code>bootstrap.bundle.min.js</code> locally in your project.</p>
+  </section>
+
+  <!-- 2. Bootstrap Structure and Files -->
+  <section id="exercise-2" class="mb-5">
+    <h2>2.1 & 2.2: Bootstrap Folder Structure & JavaScript Plugins</h2>
+    <ul>
+      <li><strong>css/</strong> - contains compiled CSS files.</li>
+      <li><strong>js/</strong> - contains JavaScript plugins and bundle.</li>
+      <li><strong>icons/</strong> - optional folder with SVG icon files.</li>
+    </ul>
+    <p>JS plugins are included via <code>bootstrap.bundle.min.js</code>, which contains Popper for dropdowns, modals, tooltips, etc.</p>
+  </section>
+
+  <!-- 3. Fundamentals of Responsive Grid Layout -->
+  <section id="exercise-3" class="mb-5">
+    <h2>3.1 & 3.2: Responsive Grid Layout</h2>
+    <div class="container border p-3">
+      <div class="row">
+        <div class="col-12 col-sm-6 col-lg-4 border p-2">Column 1</div>
+        <div class="col-12 col-sm-6 col-lg-4 border p-2">Column 2</div>
+        <div class="col-12 col-sm-6 col-lg-4 border p-2">Column 3</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Column Layouts and Grid Classes -->
+  <section id="exercise-4" class="mb-5">
+    <h2>4.1 Two-Column Layout</h2>
+    <div class="container border p-3">
+      <div class="row">
+        <div class="col-md-3 bg-light p-3 border">Sidebar (col-md-3)</div>
+        <div class="col-md-9 bg-white p-3 border">Content Area (col-md-9)</div>
+      </div>
+    </div>
+
+    <h2 class="mt-4">4.2 Four-Column Layout</h2>
+    <div class="container border p-3">
+      <div class="row">
+        <div class="col-sm-3 border p-2">Col 1</div>
+        <div class="col-sm-3 border p-2">Col 2</div>
+        <div class="col-sm-3 border p-2">Col 3</div>
+        <div class="col-sm-3 border p-2">Col 4</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Alignment and Reordering in Grid -->
+  <section id="exercise-5" class="mb-5">
+    <h2>5.1 Center Content</h2>
+    <div class="d-flex justify-content-center align-items-center border" style="height:100px;">
+      Centered content in row
+    </div>
+
+    <h2 class="mt-4">5.2 Reordering Columns</h2>
+    <div class="container border p-3">
+      <div class="row">
+        <div class="col-md-6 order-md-2 border p-2">Second on desktop</div>
+        <div class="col-md-6 order-md-1 border p-2">First on desktop</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. Responsive Flexbox Utilities -->
+  <section id="exercise-6" class="mb-5">
+    <h2>6.1 Responsive Navbar with Flexbox</h2>
+    <nav class="d-flex flex-column flex-md-row bg-light p-3 border">
+      <a href="#" class="me-md-3 mb-2 mb-md-0">Home</a>
+      <a href="#" class="me-md-3 mb-2 mb-md-0">About</a>
+      <a href="#" class="me-md-3 mb-2 mb-md-0">Services</a>
+      <a href="#" class="mb-2 mb-md-0">Contact</a>
+    </nav>
+
+    <h2 class="mt-4">6.2 Card Layout with Flex Utilities</h2>
+    <div class="card d-flex justify-content-between align-items-center p-3" style="max-width:400px;">
+      <div>Card content</div>
+      <button class="btn btn-primary">Action</button>
+    </div>
+  </section>
+
+  <!-- 7. Typography -->
+  <section id="exercise-7" class="mb-5">
+    <h2>7.1 Bootstrap Typography Utilities</h2>
+    <h1 class="display-1">Display 1</h1>
+    <p class="lead">This is a lead paragraph.</p>
+    <p class="text-muted">Muted text example.</p>
+    <p class="fw-bold">Bold text example.</p>
+
+    <h2 class="mt-4">7.2 Text Transform Utilities</h2>
+    <p class="text-uppercase">Uppercase text</p>
+    <p class="text-lowercase">Lowercase text</p>
+    <p class="text-capitalize">Capitalized text</p>
+  </section>
+
+  <!-- 8. Forms -->
+  <section id="exercise-8" class="mb-5">
+    <h2>8.1 Registration Form</h2>
+    <form>
+      <div class="mb-3">
+        <label for="regName" class="form-label">Name</label>
+        <input type="text" class="form-control" id="regName" placeholder="Enter your name" />
+      </div>
+      <div class="mb-3">
+        <label for="regEmail" class="form-label">Email</label>
+        <input type="email" class="form-control" id="regEmail" placeholder="Enter your email" />
+      </div>
+      <div class="mb-3 form-check">
+        <input type="checkbox" class="form-check-input" id="regCheck" />
+        <label class="form-check-label" for="regCheck">Agree to terms</label>
+      </div>
+      <button type="submit" class="btn btn-primary">Register</button>
+    </form>
+
+    <h2 class="mt-4">8.2 Floating Label Login Form</h2>
+    <form style="max-width: 300px;">
+      <div class="form-floating mb-3">
+        <input type="email" class="form-control" id="loginEmail" placeholder="name@example.com" />
+        <label for="loginEmail">Email address</label>
+      </div>
+      <div class="form-floating mb-3">
+        <input type="password" class="form-control" id="loginPassword" placeholder="Password" />
+        <label for="loginPassword">Password</label>
+      </div>
+      <button type="submit" class="btn btn-success">Login</button>
+    </form>
+  </section>
+
+  <!-- 9. Buttons -->
+  <section id="exercise-9" class="mb-5">
+    <h2>9.1 Buttons with Contextual Classes</h2>
+    <button class="btn btn-primary me-1 mb-1">Primary</button>
+    <button class="btn btn-secondary me-1 mb-1">Secondary</button>
+    <button class="btn btn-success me-1 mb-1">Success</button>
+    <button class="btn btn-danger me-1 mb-1">Danger</button>
+    <button class="btn btn-warning me-1 mb-1">Warning</button>
+    <button class="btn btn-info me-1 mb-1">Info</button>
+    <button class="btn btn-light me-1 mb-1">Light</button>
+    <button class="btn btn-dark me-1 mb-1">Dark</button>
+    <button class="btn btn-link me-1 mb-1">Link</button>
+
+    <h2 class="mt-4">9.2 Button Groups and Toggle Buttons</h2>
+    <div class="btn-group" role="group" aria-label="Basic example">
+      <button type="button" class="btn btn-outline-primary">Left</button>
+      <button type="button" class="btn btn-outline-primary">Middle</button>
+      <button type="button" class="btn btn-outline-primary">Right</button>
+    </div>
+
+    <div class="btn-group mt-3" role="group" aria-label="Toggle checkbox buttons">
+      <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off" />
+      <label class="btn btn-outline-success" for="btncheck1">Checkbox 1</label>
+
+      <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off" />
+      <label class="btn btn-outline-success" for="btncheck2">Checkbox 2</label>
+    </div>
+  </section>
+
+  <!-- 10. Navbars and Navigation -->
+  <section id="exercise-10" class="mb-5">
+    <h2>10.1 Responsive Navbar</h2>
+    <nav class="navbar navbar-expand-md navbar-light bg-light mb-3">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav me-auto mb-2 mb-md-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Features</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Pricing</a>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <h2>10.2 Vertical Nav (Pills)</h2>
+    <div class="d-flex">
+      <nav class="nav flex-column nav-pills me-3" aria-orientation="vertical">
+        <a class="nav-link active" href="#">Active</a>
+        <a class="nav-link" href="#">Link</a>
+        <a class="nav-link" href="#">Link</a>
+        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"
+          >Disabled</a
+        >
+      </nav>
+      <div class="p-2 border flex-fill">Content beside vertical nav</div>
+    </div>
+  </section>
+
+  <!-- 11. Cards -->
+  <section id="exercise-11" class="mb-5">
+    <h2>11.1 Simple Card</h2>
+    <div class="card" style="width: 18rem;">
+      <img
+        src="https://via.placeholder.com/286x180.png?text=Card+Image"
+        class="card-img-top"
+        alt="Card image"
+      />
+      <div class="card-body">
+        <h5 class="card-title">Card Title</h5>
+        <p class="card-text">
+          Some quick example text to build on the card title and make up the
+          bulk of the card's content.
+        </p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+
+    <h2 class="mt-4">11.2 Card Groups</h2>
+    <div class="card-group">
+      <div class="card">
+        <img
+          src="https://via.placeholder.com/150.png?text=Card+1"
+          class="card-img-top"
+          alt="Card 1"
+        />
+        <div class="card-body">
+          <h5 class="card-title">Card 1</h5>
+          <p class="card-text">Text for card 1.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img
+          src="https://via.placeholder.com/150.png?text=Card+2"
+          class="card-img-top"
+          alt="Card 2"
+        />
+        <div class="card-body">
+          <h5 class="card-title">Card 2</h5>
+          <p class="card-text">Text for card 2.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img
+          src="https://via.placeholder.com/150.png?text=Card+3"
+          class="card-img-top"
+          alt="Card 3"
+        />
+        <div class="card-body">
+          <h5 class="card-title">Card 3</h5>
+          <p class="card-text">Text for card 3.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 12. Modals -->
+  <section id="exercise-12" class="mb-5">
+    <h2>12.1 Modal Example</h2>
+    <button
+      type="button"
+      class="btn btn-primary"
+      data-bs-toggle="modal"
+      data-bs-target="#exampleModal"
+    >
+      Launch demo modal
+    </button>
+
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">This is the modal body content.</div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 13. Alerts -->
+  <section id="exercise-13" class="mb-5">
+    <h2>13.1 Alert Types</h2>
+    <div class="alert alert-primary" role="alert">
+      This is a primary alert—check it out!
+    </div>
+    <div class="alert alert-secondary" role="alert">
+      This is a secondary alert—check it out!
+    </div>
+    <div class="alert alert-success" role="alert">
+      This is a success alert—check it out!
+    </div>
+    <div class="alert alert-danger" role="alert">
+      This is a danger alert—check it out!
+    </div>
+    <div class="alert alert-warning" role="alert">
+      This is a warning alert—check it out!
+    </div>
+    <div class="alert alert-info" role="alert">
+      This is an info alert—check it out!
+    </div>
+  </section>
+
+  <!-- 14. Tooltips and Popovers -->
+  <section id="exercise-14" class="mb-5">
+    <h2>14.1 Tooltip Example</h2>
+    <button
+      type="button"
+      class="btn btn-secondary"
+      data-bs-toggle="tooltip"
+      data-bs-placement="top"
+      title="Tooltip on top"
+    >
+      Hover me for tooltip
+    </button>
+
+    <h2 class="mt-4">14.2 Popover Example</h2>
+    <button
+      type="button"
+      class="btn btn-info"
+      data-bs-toggle="popover"
+      title="Popover title"
+      data-bs-content="And here's some amazing content. It's very engaging. Right?"
+    >
+      Click me for popover
+    </button>
+  </section>
+
+  <!-- 15. Pagination -->
+  <section id="exercise-15" class="mb-5">
+    <h2>15.1 Pagination Example</h2>
+    <nav aria-label="Page navigation example">
+      <ul class="pagination">
+        <li class="page-item disabled">
+          <a class="page-link" href="#" tabindex="-1" aria-disabled="true"
+            >Previous</a
+          >
+        </li>
+        <li class="page-item"><a class="page-link" href="#">1</a></li>
+        <li class="page-item active" aria-current="page">
+          <a class="page-link" href="#">2</a>
+        </li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item">
+          <a class="page-link" href="#">Next</a>
+        </li>
+      </ul>
+    </nav>
+  </section>
+
+  <!-- 16. Badges -->
+  <section id="exercise-16" class="mb-5">
+    <h2>16.1 Badges Example</h2>
+    <h1>
+      Notifications <span class="badge bg-danger">99+</span>
+    </h1>
+    <button type="button" class="btn btn-primary position-relative">
+      Inbox
+      <span
+        class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+      >
+        4
+        <span class="visually-hidden">unread messages</span>
+      </span>
+    </button>
+  </section>
+
+  <!-- 17. List Groups -->
+  <section id="exercise-17" class="mb-5">
+    <h2>17.1 List Group Example</h2>
+    <ul class="list-group" style="max-width: 300px;">
+      <li class="list-group-item active" aria-current="true">
+        Cras justo odio
+      </li>
+      <li class="list-group-item">Dapibus ac facilisis in</li>
+      <li class="list-group-item">Morbi leo risus</li>
+      <li class="list-group-item">Porta ac consectetur ac</li>
+      <li class="list-group-item disabled" aria-disabled="true">
+        Disabled item
+      </li>
+    </ul>
+  </section>
+
+  <!-- 18. Tables -->
+  <section id="exercise-18" class="mb-5">
+    <h2>18.1 Basic Table</h2>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">First</th>
+          <th scope="col">Last</th>
+          <th scope="col">Handle</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>Mark</td>
+          <td>Otto</td>
+          <td>@motto</td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>Jacob</td>
+          <td>Thornton</td>
+          <td>@fat</td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td>Larry</td>
+          <td>Bird</td>
+          <td>@twitter</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2 class="mt-4">18.2 Table with Striped Rows</h2>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>City</th>
+          <th>Country</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>New York</td>
+          <td>USA</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>London</td>
+          <td>UK</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Paris</td>
+          <td>France</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- 19. Utilities -->
+  <section id="exercise-19" class="mb-5">
+    <h2>19.1 Spacing Utilities</h2>
+    <div class="bg-primary text-white p-3 mb-3">Padding all sides (p-3)</div>
+    <div class="bg-success text-white m-3">Margin all sides (m-3)</div>
+    <div class="bg-warning text-dark mt-4 mb-2 p-2">
+      Top margin 4 and bottom margin 2
+    </div>
+
+    <h2>19.2 Display Utilities</h2>
+    <div class="d-none d-md-block bg-info text-white p-2 mb-2">
+      Visible only on md and up
+    </div>
+    <div class="d-block d-md-none bg-secondary text-white p-2">
+      Visible only below md
+    </div>
+  </section>
+
+  <!-- Bootstrap Bundle JS (includes Popper) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Initialize tooltips and popovers -->
+  <script>
+    // Enable all tooltips on page
+    document.querySelectorAll('[data-bs-toggle="tooltip"]').forEach(el => {
+      new bootstrap.Tooltip(el);
+    });
+
+    // Enable all popovers on page
+    document.querySelectorAll('[data-bs-toggle="popover"]').forEach(el => {
+      new bootstrap.Popover(el);
+    });
+  </script>
+</body>
+</html>
